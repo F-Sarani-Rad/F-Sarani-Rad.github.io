@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fatemeh Sarani Rad</title>
+  <meta name="description" content="Fatemeh Sarani Rad — PhD student in Computer Science at North Dakota State University.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="name-link" href="#top">FSR</a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav">
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#honors">Honors</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="page">
+    <section class="intro">
+      <div class="intro-grid">
+        <div class="intro-copy">
+          <p class="meta-line">PhD Student · NDSU · Machine Learning for Healthcare</p>
+          <h1>Fatemeh Sarani Rad</h1>
+          <p class="tagline">
+            I work on how learning systems can make better decisions over time using reinforcement learning,
+            privacy-preserving learning, and structured patient-specific representations.
+          </p>
+          <p class="topics">reinforcement learning · federated learning · digital twins · healthcare AI</p>
+          <div class="links">
+            <a href="mailto:fatemeh.saranirad@ndsu.edu">Email</a>
+            <a href="https://scholar.google.com/citations?user=w3glJx4AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://www.linkedin.com/in/fatemeh-sarani-rad-473a5658/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/F-Sarani-Rad" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <figure class="profile-photo">
+  	 <img src="profile.jpg" alt="Fatemeh Sarani Rad">
+	</figure>
+
+      </div>
+
+      <div class="agent-demo">
+        <div class="demo-caption">
+          <span>a simple learning loop — watch the signal move through the system</span>
+          <button id="move-reward" type="button">move reward</button>
+        </div>
+
+        <svg id="loop-svg" viewBox="0 0 860 220" aria-label="Animated reinforcement learning loop">
+          <defs>
+            <marker id="arrow" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto">
+              <path d="M0,0 L8,4 L0,8 Z"></path>
+            </marker>
+          </defs>
+
+          <path id="main-path" d="M135 110 C210 110 220 110 300 110 S465 110 545 110 S690 110 750 110"
+                class="line" marker-end="url(#arrow)"/>
+          <path id="return-path" d="M750 145 C655 200 250 200 135 145"
+                class="line dashed" marker-end="url(#arrow)"/>
+
+          <g class="box" transform="translate(70 74)">
+            <rect width="130" height="72" rx="14"></rect>
+            <text x="65" y="31" text-anchor="middle">state</text>
+            <text x="65" y="50" text-anchor="middle" class="sub">observation</text>
+          </g>
+
+          <g class="box" transform="translate(300 74)">
+            <rect width="130" height="72" rx="14"></rect>
+            <text x="65" y="31" text-anchor="middle">policy</text>
+            <text x="65" y="50" text-anchor="middle" class="sub">learn</text>
+          </g>
+
+          <g class="box" transform="translate(530 74)">
+            <rect width="130" height="72" rx="14"></rect>
+            <text x="65" y="31" text-anchor="middle">action</text>
+            <text x="65" y="50" text-anchor="middle" class="sub">decision</text>
+          </g>
+
+          <g class="box" transform="translate(720 74)">
+            <rect width="110" height="72" rx="14"></rect>
+            <text x="55" y="31" text-anchor="middle">environment</text>
+            <text x="55" y="50" text-anchor="middle" class="sub">response</text>
+          </g>
+
+          <g id="reward-group" transform="translate(420 174)">
+            <circle class="reward-ring" r="16"></circle>
+            <circle class="reward-core" r="5"></circle>
+            <text x="24" y="4">reward</text>
+          </g>
+
+          <circle id="traveler" r="7" class="traveler"></circle>
+        </svg>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <p class="section-label">About</p>
+      <h2>Research</h2>
+
+      <div class="prose">
+        <p>
+          I am a PhD student in Computer Science at North Dakota State University and a researcher in
+          the Intelligence Lab. My research focuses on machine learning for personalized healthcare
+          decision support, particularly sequential decision-making under real-world constraints.
+        </p>
+        <p>
+          Much of my work asks how a learning system should adapt its decisions over time when objectives
+          compete, observations are imperfect, and sensitive data cannot always be centralized. I have
+          worked on reward shaping for glycemic management, multi-objective and federated reinforcement
+          learning, and patient-centric digital twins that use knowledge graphs to represent individualized
+          clinical context.
+        </p>
+        <p>
+          I am also exploring multi-agent reinforcement learning and broader questions around coordination
+          between interacting learning components. Across these projects, I care about reproducible
+          experimentation, careful evaluation, and building models that remain meaningful in the setting
+          where they are used.
+        </p>
+        <p>
+	  My work on patient-centric digital twins and knowledge graphs for personalized diabetes management received the Journal of Personalized Medicine Best Paper Award.
+	</p>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <p class="section-label">Publications</p>
+      <h2>Papers</h2>
+
+      <div class="year">2025</div>
+      <article class="publication">
+        <h3>Privacy-Preserving Glycemic Management in Type 1 Diabetes: Development and Validation of a Multiobjective Federated Reinforcement Learning Framework</h3>
+        <p><strong>Fatemeh Sarani Rad</strong>, J. Li</p>
+        <p class="venue">JMIR Diabetes · 10:e72874</p>
+        <div class="pub-links">
+          <a href="https://diabetes.jmir.org/2025/1/e72874" target="_blank" rel="noopener">Paper</a>
+          <a href="https://doi.org/10.2196/72874" target="_blank" rel="noopener">DOI</a>
+          <button type="button" class="cite-btn" data-cite="Sarani Rad, F.; Li, J. Privacy-Preserving Glycemic Management in Type 1 Diabetes: Development and Validation of a Multiobjective Federated Reinforcement Learning Framework. JMIR Diabetes, 2025;10:e72874.">cite</button>
+        </div>
+      </article>
+
+      <div class="year">2024</div>
+      <article class="publication">
+        <h3>Personalized Diabetes Management with Digital Twins: A Patient-Centric Knowledge Graph Approach</h3>
+        <p><strong>Fatemeh Sarani Rad</strong>, R. Hendawi, X. Yang, J. Li</p>
+        <p class="venue">🏆 Best Paper Award — Journal of Personalized Medicine · 14(4):359</p>
+        <div class="pub-links">
+	  <a href="https://www.mdpi.com/2075-4426/14/4/359" target="_blank" rel="noopener">Paper</a>
+          <a href="https://doi.org/10.3390/jpm14040359" target="_blank" rel="noopener">DOI</a>
+          <button type="button" class="cite-btn" data-cite="Sarani Rad, F.; Hendawi, R.; Yang, X.; Li, J. Personalized Diabetes Management with Digital Twins: A Patient-Centric Knowledge Graph Approach. Journal of Personalized Medicine, 2024;14(4):359.">cite</button>
+        </div>
+      </article>
+
+      <article class="publication">
+        <h3>Delighting Palates with AI: Reinforcement Learning’s Triumph in Crafting Personalized Meal Plans with High User Acceptance</h3>
+        <p>M. Amiri, <strong>Fatemeh Sarani Rad</strong>, J. Li</p>
+        <p class="venue">Nutrients · 16:346</p>
+        <div class="pub-links">
+	  <a href="https://www.mdpi.com/2072-6643/16/3/346" target="_blank" rel="noopener">Paper</a>
+          <a href="https://doi.org/10.3390/nu16030346" target="_blank" rel="noopener">DOI</a>
+          <button type="button" class="cite-btn" data-cite="Amiri, M.; Sarani Rad, F.; Li, J. Delighting Palates with AI: Reinforcement Learning’s Triumph in Crafting Personalized Meal Plans with High User Acceptance. Nutrients, 2024;16:346.">cite</button>
+        </div>
+      </article>
+
+      <article class="publication">
+        <h3>Optimizing Nutritional Decisions: A Particle Swarm Optimization–Simulated Annealing-Enhanced Analytic Hierarchy Process Approach for Personalized Meal Planning</h3>
+        <p><strong>Fatemeh Sarani Rad</strong>, M. Amiri, J. Li</p>
+        <p class="venue">Nutrients · 16:3117</p>
+        <div class="pub-links">
+	  <a href="https://www.mdpi.com/2072-6643/16/18/3117" target="_blank" rel="noopener">Paper</a>
+          <a href="https://doi.org/10.3390/nu16183117" target="_blank" rel="noopener">DOI</a>
+          <button type="button" class="cite-btn" data-cite="Sarani Rad, F.; Amiri, M.; Li, J. Optimizing Nutritional Decisions: A Particle Swarm Optimization–Simulated Annealing-Enhanced Analytic Hierarchy Process Approach for Personalized Meal Planning. Nutrients, 2024;16:3117.">cite</button>
+        </div>
+      </article>
+
+      <div class="year">2023</div>
+      <article class="publication">
+        <h3>Optimizing Blood Glucose Control through Reward Shaping in Reinforcement Learning</h3>
+        <p><strong>Fatemeh Sarani Rad</strong>, J. Li</p>
+        <p class="venue">IEEE HealthCom</p>
+        <div class="pub-links">
+	  <a href="https://ieeexplore.ieee.org/abstract/document/10472341" target="_blank" rel="noopener">Paper</a>
+          <a href="https://ieeexplore.ieee.org/abstract/document/10472341/" target="_blank" rel="noopener">IEEE Xplore</a>
+          <button type="button" class="cite-btn" data-cite="Sarani Rad, F.; Li, J. Optimizing Blood Glucose Control through Reward Shaping in Reinforcement Learning. IEEE HealthCom, 2023.">cite</button>
+        </div>
+      </article>
+    </section>
+
+    <section id="experience" class="section">
+      <p class="section-label">Experience</p>
+      <h2>Industry & research</h2>
+
+      <article class="exp">
+        <div class="exp-head">
+          <div><strong>Graduate Research Assistant</strong> · North Dakota State University</div>
+          <div>May 2023 – present</div>
+        </div>
+        <p>
+          Machine learning and reinforcement learning for personalized healthcare decision support,
+          including federated reinforcement learning, patient-centric digital twins, knowledge graphs,
+          and reproducible evaluation pipelines.
+        </p>
+      </article>
+
+      <article class="exp">
+        <div class="exp-head">
+          <div><strong>Data Analyst Intern</strong> · Brain Tunnelgenix Technologies Corp.</div>
+          <div>2024 · 2025 · 2026</div>
+        </div>
+        <p>
+          Built dashboards and recurring reports, used Python and SQL for data extraction, cleaning,
+          and analysis, and documented validation checks and analytical workflows for operational
+          decision-making.
+        </p>
+      </article>
+
+      <article class="exp">
+        <div class="exp-head">
+          <div><strong>Data Scientist & Software Developer</strong> · Noor Eye Hospital</div>
+          <div>Sep 2020 – Mar 2023</div>
+        </div>
+        <p>
+          Developed healthcare data pipelines, visualization workflows, software tools, and analytics
+          systems in a clinical environment.
+        </p>
+      </article>
+
+      <article class="exp">
+        <div class="exp-head">
+          <div><strong>R&D / Data Analytics</strong> · Ministry of Health and Medical Education</div>
+          <div>2016 – 2020</div>
+        </div>
+        <p>
+          Contributed to national-scale EHR, health data exchange, interoperability, technical standards,
+          data mapping, analysis, and visualization projects.
+        </p>
+      </article>
+    </section>
+
+    <section id="education" class="section">
+      <p class="section-label">Education</p>
+      <h2>Degrees</h2>
+
+      <div class="degree">
+        <div>
+          <strong>Ph.D., Computer Science</strong>
+          <span>North Dakota State University</span>
+        </div>
+        <div>May 2023 – present<br><span class="small">Expected May 2028</span></div>
+      </div>
+
+      <div class="degree">
+        <div>
+          <strong>M.S., Computer Science</strong>
+          <span>Decision Sciences & Knowledge Engineering · University of Economic Sciences (Kharazmi)</span>
+        </div>
+        <div>2011 – 2014<br><span class="small">GPA 18.80/20</span></div>
+      </div>
+    </section>
+
+    <section id="honors" class="section">
+      <p class="section-label">Honors</p>
+      <h2>Honors and Awards</h2>
+
+      <ul class="honors">
+	<li><span>2026–2027</span> Mancur Olson Graduate Fellowship — Sheila and Robert Challey Institute for Global Innovation and Growth</li>
+	<li><span>2026–2027</span> Mancur Olson Reading Group Scholar (Expertise and Public Trust) — Sheila and Robert Challey Institute for Global Innovation and Growth</li>
+        <li><span>2026–2027</span> Possibility Fellow — NDSU Center for Entrepreneurship and Family Business</li>
+        <li><span>2026</span>Best Paper Award, Journal of Personalized Medicine — Personalized Diabetes Management with Digital Twins: A Patient-Centric Knowledge Graph Approach </li>
+	<li><span>2026</span> Mancur Olson Reading Group Scholar (AI Education and The Future of Learning) — Sheila and Robert Challey Institute for Global Innovation and Growth</li>
+        <li><span>2026</span> Second Place, Start Something Weekend — FinNova</li>
+        <li><span>2025</span> Second Place, P2P “Problem to Possible” Systems Mapping Competition</li>
+        <li><span>2025</span> Bill Perrizo Scholarship</li>
+        <li><span>2024</span> Rahul Devabhaktuni Memorial Scholarship</li>
+        <li><span>2014</span> 1st Rank among M.S. graduates in Decision Science & Knowledge Engineering</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section">
+      <p class="section-label">Contact</p>
+      <h2>Get in touch</h2>
+      <p>The fastest way to reach me is email: <a href="mailto:fatemeh.saranirad@ndsu.edu">fatemeh.saranirad@ndsu.edu</a>.</p>
+      <p class="small-note">Most research repositories are private due to lab and data confidentiality.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Fatemeh Sarani Rad</span>
+    <span>Updated September 2026</span>
+  </footer>
+
+  <div id="toast" class="toast">Citation copied</div>
+  <script src="script.js"></script>
+</body>
+</html>
